@@ -1,0 +1,24 @@
+syntax = "proto3";
+//package sparkpk;
+option go_package = "./pb";
+//import "google/protobuf/timestamp.proto";
+//option csharp_namespace = "SkiData.Spark.OpenInterface.Parking.Protos";
+
+//--------------------------------------------------------------------------------------------
+// Service Definitions
+//--------------------------------------------------------------------------------------------
+
+
+service CommandService {
+  rpc Execute(stream ServerMsg) returns (stream ClientMsg) {}
+}
+
+message ServerMsg {
+  string Msg = 1;
+}
+message ClientMsg {
+  string Msg = 1;
+}
+
+
+
